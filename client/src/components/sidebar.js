@@ -1,24 +1,39 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react'
 
-export default class Sidebar extends Component {
-    state = { activeItem: 'home' }
+const SidebarExampleVisible = () => (
+    <div className="" style={{ height: '630px' }}>
+        <Sidebar.Pushable as={Segment}>
+            <Sidebar
+                as={Menu}
+                icon='labeled'
+                inverted
+                vertical
+                visible
+                width='thin'
+            >
+                <Menu.Item as='a'>
+                    <Icon name='home' />
+                Home
+            </Menu.Item>
+                <Menu.Item as='a'>
+                    <Icon name='gamepad' />
+                Games
+            </Menu.Item>
+                <Menu.Item as='a'>
+                    <Icon name='camera' />
+                Channels
+            </Menu.Item>
+            </Sidebar>
 
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+            <Sidebar.Pusher>
+                <Segment basic>
+                    <Header as='h3'>Application Content</Header>
+                    <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+                </Segment>
+            </Sidebar.Pusher>
+        </Sidebar.Pushable>
+    </div>
+)
 
-    render() {
-        const { activeItem } = this.state
-
-        return (
-            <div style={{ minHeight: '100vh', display: 'flex', flexFlow: 'column nowrap' }}>
-                <Menu inverted vertical pointing>
-                    <Menu.Item name='Home' active={activeItem === 'Home'} onClick={this.handleItemClick} />
-                    <Menu.Item name='Messages' active={activeItem === 'Messages'} onClick={this.handleItemClick} />
-                    <Menu.Item name='Friends' active={activeItem === 'Friends'} onClick={this.handleItemClick} />
-                    <Menu.Menu />
-                </Menu>
-            </div>
-
-        )
-    }
-};
+export default SidebarExampleVisible
