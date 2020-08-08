@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form } from 'semantic-ui-react'
+import { Form, Input, TextArea, Button, Select } from 'semantic-ui-react'
 
 function Forms() {
     const genderOptions = [
@@ -43,17 +43,12 @@ function Forms() {
                 control={Input}
                 label='Email'
                 placeholder='joe@schmoe.com'
-                error={{
-                    content: 'Please enter a valid email address',
-                    pointing: 'below',
-                }}
+                // error={{
+                //     content: 'Please enter a valid email address',
+                //     pointing: 'below',
+                // }}
             />
-            <Form.Field
-                id='form-button-control-public'
-                control={Button}
-                content='Confirm'
-                label='Label with htmlFor'
-            />
+            <Button primary type='submit'>Submit</Button>
         </Form>
     )
 }
