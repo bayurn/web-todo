@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
-import { Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react'
+import React from 'react'
+import { Icon, Menu, Segment, Sidebar } from 'semantic-ui-react'
+import Home from './home'
 
-const SidebarExampleVisible = () => (
-    <div className="" style={{ height: '630px' }}>
+const SideBar = () => (
+    <div style={{ height: '100vh' }}>
         <Sidebar.Pushable as={Segment}>
             <Sidebar
                 as={Menu}
@@ -17,23 +18,17 @@ const SidebarExampleVisible = () => (
                 Home
             </Menu.Item>
                 <Menu.Item as='a'>
-                    <Icon name='gamepad' />
-                Games
+                    <Icon name='plus' />
+                Add
             </Menu.Item>
                 <Menu.Item as='a'>
-                    <Icon name='camera' />
-                Channels
+                    <Icon name='edit' />
+                Edit
             </Menu.Item>
             </Sidebar>
-
-            <Sidebar.Pusher>
-                <Segment basic>
-                    <Header as='h3'>Application Content</Header>
-                    <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
-                </Segment>
-            </Sidebar.Pusher>
+            <Home />
         </Sidebar.Pushable>
     </div>
 )
 
-export default SidebarExampleVisible
+export default SideBar
