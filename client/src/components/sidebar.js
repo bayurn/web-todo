@@ -1,6 +1,7 @@
 import React from 'react'
 import { Icon, Menu, Segment, Sidebar } from 'semantic-ui-react'
 import Home from './home'
+import { Link } from 'react-router-dom'
 
 const SideBar = () => (
     <div style={{ height: '100vh' }}>
@@ -15,11 +16,11 @@ const SideBar = () => (
             >
                 <Menu.Item as='a'>
                     <Icon name='home' />
-                Home
+                <Link to="/">Home</Link>
             </Menu.Item>
                 <Menu.Item as='a'>
                     <Icon name='plus' />
-                Add
+                <Link to="/add">Add</Link>
             </Menu.Item>
                 <Menu.Item as='a'>
                     <Icon name='edit' />
