@@ -1,12 +1,14 @@
 import React from 'react';
-import SideBar from './components/sidebar'
+import {BrowserRouter, Router, Switch, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-      <SideBar />
-    </div>
-  );
+    <Router>
+      <Switch>
+        <Route />
+      </Switch>
+    </Router>
+    );
 }
 
 export default App;

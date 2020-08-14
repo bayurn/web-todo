@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css'
+import SideBar from './components/sidebar'
 
 ReactDOM.render(
   <React.StrictMode>
+    <SideBar />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
