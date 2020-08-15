@@ -3,7 +3,9 @@ import TagCard from './card'
 
 function Add() {
     return (
-        <TagCard />
+        <>
+            <TagCard />
+        </>
     )
 }
 
