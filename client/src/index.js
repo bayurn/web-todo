@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css'
 import SideBar from './components/sidebar'
 import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <SideBar />
-      <App />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

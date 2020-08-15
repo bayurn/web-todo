@@ -14,14 +14,18 @@ const SideBar = () => (
                 visible
                 width='thin'
             >
-                <Menu.Item as={Link} to="/">
-                    <Icon name='home' />
+                <Link to="/">
+                    <Menu.Item as={Link} to="/">
+                        <Icon name='home' />
                     Home
                 </Menu.Item>
-                <Menu.Item as={Link} to="/add">
-                    <Icon name='plus' />
+                </Link>
+                <Link to="/">
+                    <Menu.Item as={Link} to="/add">
+                        <Icon name='plus' />
                     Add
                 </Menu.Item>
+                </Link>
                 <Menu.Item as='a'>
                     <Icon name='edit' />
                 Edit
