@@ -3,7 +3,7 @@ import { Header, Table } from 'semantic-ui-react'
 
 function Tables() {
     return (
-        <Table celled padded style={{ width: '1100px' }}>
+        <Table celled padded style={{ width: '1200px' }}>
             <Table.Header>
                 <Table.Row>
                     <Table.HeaderCell singleLine>Name</Table.HeaderCell>
